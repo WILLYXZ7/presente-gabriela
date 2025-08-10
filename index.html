@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Olá rs 💕</title>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+<link rel="icon" href="img/coracao.ico" type="image/x-icon">
+<style>
+    body {
+        font-family: 'Poppins', sans-serif;
+        background: linear-gradient(135deg, #fff0f5 0%, #e0c3fc 100%);
+        color: #5a2d82;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 100vh;
+    }
+    h1 {
+        font-family: 'Dancing Script', cursive;
+        font-size: 60px;
+        color: #d63384;
+        margin-top: 20px;
+        text-shadow: 0 0 16px #ffb6c1, 0 0 32px #d63384;
+    }
+     h2 {
+        font-family: 'sans-serif', cursive;
+        font-size: 60px;
+        color: #000000;
+        margin-top: 40px;
+    }
+    p {
+        font-size: 18px;
+        margin: 10px;
+    }
+    button {
+        background-color: #ff4d6d;
+        color: white;
+        border: none;
+        padding: 16px 32px;
+        border-radius: 32px;
+        cursor: pointer;
+        font-size: 22px;
+        margin-top: 20px;
+        box-shadow: 0 2px 8px rgba(214,51,132,0.1);
+    }
+    button:hover {
+        background-color: #ff1e4d;
+        transform: scale(1.05);
+    }
+    #mensagem {
+        font-size: 22px;
+        color: #ff1493;
+        margin-top: 20px;
+        display: none;
+    }
+    .galeria {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 20px;
+    }
+    .galeria img {
+        width: 100%;
+        max-width: 220px;
+        height: auto;
+        object-fit: cover;
+        border-radius: 20px;
+        margin: 10px;
+        border: 4px solid #e0c3fc;
+        box-shadow: 0 4px 16px rgba(214,51,132,0.12);
+        transition: all 0.3s ease;
+        opacity: 0;
+        animation: fadeImg 1s ease forwards;
+    }
+    @keyframes fadeImg {
+        to { opacity: 1; }
+    }
+    .galeria img:hover {
+        box-shadow: 0 8px 24px rgba(214,51,132,0.2);
+        transform: scale(1.03);
+    }
+    #textoDigitado {
+        font-size: 20px;
+        margin-top: 20px;
+        color: #c71585;
+        min-height: 30px;
+    }
+    .container {
+        max-width: 1550px;
+        width: 100%;
+        margin: 0 auto;
+        background: #fff;
+        border-radius: 24px;
+        box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+        padding: 24px 20px;
+        margin-top: 40px;
+        opacity: 0;
+        transform: translateY(40px);
+        animation: fadeInUp 1.2s ease forwards;
+        border: 6px solid;
+        border-image: linear-gradient(135deg, #ff4d6d, #e0c3fc, #d63384) 1;
+    }
+    @keyframes fadeInUp {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    footer {
+        margin-top: 40px;
+        color: #b8860b;
+        font-size: 16px;
+    }
+    #textoAnimado.animar {
+        animation: moverTexto 6s linear forwards;
+    }
+    @keyframes moverTexto {
+        from { left: -400px; }
+        to { left: 100vw; }
+    }
+    @keyframes bordaAnimada {
+        0% { border-image-source: linear-gradient(135deg, #ff4d6d, #e0c3fc, #d63384); }
+        100% { border-image-source: linear-gradient(315deg, #d63384, #e0c3fc, #ff4d6d); }
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+<h1>6 ANOS COM O AMOR DA MINHA VIDA!💕</h1>
+<p id="contador"></p>
+
+<!-- Galeria de fotos -->
+<div class="galeria" id="galeria">
+
+</div>
+
+<!-- Botão inicial -->
+<button id="iniciar">Clique para pegar seu presente 🎁</button>
+
+<!-- Mensagem -->
+<p id="mensagem"></p>
+
+<!-- Texto digitado -->
+<p id="textoDigitado"></p>
+
+<!-- Texto fixo -->
+<p id="textoFixo" style="display:none; font-size:22px; color:#8a2be2; margin-top:40px;">
+    10.08.2019 💖
+</p>
+
+<!-- Música -->
+<audio id="musica" src="audio/musica.mp3" loop></audio>
+
+<!-- Texto animado -->
+<!-- Quiz divertido -->
+<div id="quiz" style="display:none; margin-top:30px;">
+  <h2 style="font-family:'Pacifico',cursive; color:#d63384;">Quiz do Casal</h2>
+  <div id="pergunta"></div>
+  <button id="respostaA"></button>
+  <button id="respostaB"></button>
+  <p id="feedback" style="font-size:20px; color:#ff1493;"></p>
+</div>
+
+<!-- Botão para trocar a música -->
+<button id="trocarMusica" style="margin-top:20px; display:none;">Trocar música 🎵</button>
+
+<div id="barraProgresso" style="width:100%;height:8px;background:#e0c3fc;border-radius:8px;overflow:hidden;margin-top:10px;display:none;">
+  <div id="progresso" style="height:100%;width:0;background:#d63384;"></div>
+</div>
+</div>
+
+<footer>
+    Feito com muito amor e carinho
+</footer>
+    de: Wellynton 
+</footer>
+    para: Gabriela 💝
+  <footer>
+
+<script>
+
+
+// Evento inicial
+document.getElementById('iniciar').addEventListener('click', function() {
+    document.getElementById('mensagem').style.display = 'block';
+    document.getElementById('musica').play();
+    this.style.display = 'none';
+    // Contador de dias juntos
+    const dataInicio = new Date('10-08-2019'); 
+    const hoje = new Date();
+    const diferenca = hoje - dataInicio;
+    const dias = Math.floor(diferenca / (1000 * 60 * 60 * 24));
+    document.getElementById('contador').textContent = `Já estamos juntos há ${dias} dias 💕`;
+
+    escreverTexto();
+    mostrarImagens();
+
+    // Mostra o texto fixo
+    document.getElementById('textoFixo').style.display = 'block';
+    document.getElementById('trocarMusica').style.display = 'inline-block';
+    document.getElementById('quiz').style.display = 'block'; // <-- Adicione esta linha
+
+    mostrarQuiz();
+});
+
+// Corações caindo
+function criarCoracao() {
+    const coracao = document.createElement('div');
+    coracao.innerHTML = '❤️';
+    coracao.style.position = 'fixed';
+    coracao.style.left = Math.random() * 100 + 'vw';
+    coracao.style.top = '-2rem';
+    coracao.style.fontSize = Math.random() * 20 + 10 + 'px';
+    coracao.style.opacity = Math.random();
+    coracao.style.transition = 'transform 5s linear, opacity 5s';
+    document.body.appendChild(coracao);
+
+    setTimeout(() => {
+        coracao.style.transform = `translateY(${window.innerHeight + 100}px)`;
+        coracao.style.opacity = 0;
+    }, 100);
+
+    setTimeout(() => {
+        coracao.remove();
+    }, 50000);
+}
+setInterval(criarCoracao, 500);
+
+// Texto digitado (efeito máquina de escrever)
+const frases = [
+    "Hoje fazem 6 anos que minha vida mudou.",
+    "Mudou porque conheci a pessoa que me completa, que me escuta, que sente minhas dores e que me encoraja.",
+    "A pessoa que me escolheu, do jeito que eu sou, meio tamtam, meio lerdinho ou teimoso. Mas que apesar de tudo sempre faz de tudo pra me ver bem.",
+    "Nunca vou esquecer tudo que você fez e faz por mim.",
+    "Tu é o amor da minha vida, obrigado por tudo e que venham mais 6, 12, 24 anos juntos!", 
+    "Eu te amo ❤️"
+]
+
+let fraseIndex = 0;
+let charIndex = 0;
+
+function escreverTexto() {
+    if (fraseIndex < frases.length) {
+        if (charIndex < frases[fraseIndex].length) {
+            document.getElementById("textoDigitado").textContent += frases[fraseIndex].charAt(charIndex);
+            charIndex++;
+            setTimeout(escreverTexto, 20); // velocidade de digitação
+        } else {
+            fraseIndex++;
+            charIndex = 0;
+            setTimeout(() => {
+                document.getElementById("textoDigitado").textContent = "";
+                escreverTexto();
+            }, 8000); // tempo antes de mudar de frase
+        }
+    } else {
+        fraseIndex = 0;
+        escreverTexto();
+    }
+}
+
+// Mostrar imagens na galeria
+function mostrarImagens() {
+    const imagens = [
+        'img/foto1.jpg',
+        'img/foto2.jpg',
+        'img/foto3.jpg',
+        'img/foto4.jpg',
+        'img/foto5.jpg',
+        'img/foto6.jpg'
+    ]; // coloque os caminhos das suas imagens aqui
+
+    const galeria = document.getElementById('galeria');
+    galeria.innerHTML = ''; 
+
+    imagens.forEach(src => {
+        const img = document.createElement('img');
+        img.src = src;
+        galeria.appendChild(img);
+
+       
+        img.addEventListener('click', function() {
+            const popup = document.createElement('div');
+            popup.style.position = 'fixed';
+            popup.style.top = '0';
+            popup.style.left = '0';
+            popup.style.width = '100vw';
+            popup.style.height = '100vh';
+            popup.style.background = 'rgba(0,0,0,0.7)';
+            popup.style.display = 'flex';
+            popup.style.alignItems = 'center';
+            popup.style.justifyContent = 'center';
+            popup.style.zIndex = '9999';
+            const imgZoom = document.createElement('img');
+            imgZoom.src = src;
+            imgZoom.style.maxWidth = '90vw';
+            imgZoom.style.maxHeight = '90vh';
+            imgZoom.style.borderRadius = '24px';
+            popup.appendChild(imgZoom);
+            popup.addEventListener('click', () => popup.remove());
+            document.body.appendChild(popup);
+        });
+    });
+}
+
+function confeteEmojis() {
+    for(let i=0; i<30; i++) {
+        const emoji = document.createElement('div');
+        emoji.innerHTML = ['🎉','💖','💕','💝','🌹'][Math.floor(Math.random()*5)];
+        emoji.style.position = 'fixed';
+        emoji.style.left = Math.random()*100 + 'vw';
+        emoji.style.top = '-40px';
+        emoji.style.fontSize = (Math.random()*24+24) + 'px';
+        emoji.style.transition = 'transform 2.5s linear, opacity 2.5s';
+        document.body.appendChild(emoji);
+        setTimeout(() => {
+            emoji.style.transform = `translateY(${window.innerHeight}px)`;
+            emoji.style.opacity = 0;
+        }, 100);
+        setTimeout(() => emoji.remove(), 3000);
+    }
+}
+document.getElementById('iniciar').addEventListener('click', confeteEmojis);
+
+// Quiz 
+const quizPerguntas = [
+  {
+    pergunta: "Quem é o mais chato?",
+    a: "Gabriela",
+    b: "Wellynton",
+    correta: "Gabriela"
+  },
+  {
+    pergunta: "Quem é o mais calmo?",
+    a: "Gabriela",
+    b: "Wellynton",
+    correta: "Wellynton"
+  },
+  {
+    pergunta: "Quem toma menos banho?",
+    a: "Gabriela",
+    b: "Wellynton",
+    correta: "Gabriela"
+  },
+  {
+    pergunta: "Quem dorme mais?",
+    a: "Gabriela",
+    b: "Wellynton",
+    correta: "Gabriela"
+  },
+  {
+    pergunta: "Quem tem mais paciência?",
+    a: "Gabriela",
+    b: "Wellynton",
+    correta: "Wellynton"
+  }
+];
+
+let quizIndex = 0;
+
+function mostrarQuiz() {
+  document.getElementById('quiz').style.display = 'block';
+  carregarPergunta();
+}
+
+function carregarPergunta() {
+  const q = quizPerguntas[quizIndex];
+  document.getElementById('pergunta').textContent = q.pergunta;
+  document.getElementById('respostaA').textContent = q.a;
+  document.getElementById('respostaB').textContent = q.b;
+  document.getElementById('feedback').textContent = '';
+}
+
+document.getElementById('respostaA').onclick = function() {
+  responderQuiz('A');
+};
+document.getElementById('respostaB').onclick = function() {
+  responderQuiz('B');
+};
+
+function responderQuiz(resp) {
+  const q = quizPerguntas[quizIndex];
+  const resposta = resp === 'A' ? q.a : q.b;
+  if (resposta === q.correta) {
+    document.getElementById('feedback').textContent = "Acertou! 😍";
+    confeteAcerto();
+  } else {
+    document.getElementById('feedback').textContent = "Errou, mas te amo! 😂";
+    confeteErro();
+  }
+  quizIndex++;
+  if (quizIndex < quizPerguntas.length) {
+    setTimeout(carregarPergunta, 1500);
+  } else {
+    setTimeout(() => {
+      document.getElementById('quiz').style.display = 'none'; // Esconde o quiz ao terminar
+      quizIndex = 0;
+    }, 2000);
+  }
+}
+
+function confeteAcerto() {
+    for(let i=0; i<25; i++) {
+        const emoji = document.createElement('div');
+        emoji.innerHTML = ['🎉','💖','😍','🥳','💝'][Math.floor(Math.random()*5)];
+        emoji.style.position = 'fixed';
+        emoji.style.left = Math.random()*100 + 'vw';
+        emoji.style.top = '-40px';
+        emoji.style.fontSize = (Math.random()*24+24) + 'px';
+        emoji.style.transition = 'transform 2.5s linear, opacity 2.5s';
+        document.body.appendChild(emoji);
+        setTimeout(() => {
+            emoji.style.transform = `translateY(${window.innerHeight}px)`;
+            emoji.style.opacity = 0;
+        }, 100);
+        setTimeout(() => emoji.remove(), 3000);
+    }
+}
+
+function confeteErro() {
+    for(let i=0; i<25; i++) {
+        const emoji = document.createElement('div');
+        emoji.innerHTML = ['😂','🙈','😅','🤦‍♀️','🤦‍♂️'][Math.floor(Math.random()*5)];
+        emoji.style.position = 'fixed';
+        emoji.style.left = Math.random()*100 + 'vw';
+        emoji.style.top = '-40px';
+        emoji.style.fontSize = (Math.random()*24+24) + 'px';
+        emoji.style.transition = 'transform 2.5s linear, opacity 2.5s';
+        document.body.appendChild(emoji);
+        setTimeout(() => {
+            emoji.style.transform = `translateY(${window.innerHeight}px)`;
+            emoji.style.opacity = 0;
+        }, 100);
+        setTimeout(() => emoji.remove(), 3000);
+    }
+}
+
+// Trocar música
+const musicas = [
+  'audio/musica.mp3',
+  'audio/musica2.mp3',
+  'audio/musica3.mp3'
+];
+let musicaAtual = 0;
+document.getElementById('trocarMusica').onclick = function() {
+  musicaAtual = (musicaAtual + 1) % musicas.length;
+  const audio = document.getElementById('musica');
+  audio.src = musicas[musicaAtual];
+  audio.play();
+};
+
+const audio = document.getElementById('musica');
+
+audio.addEventListener('ended', function() {
+  musicaAtual = (musicaAtual + 1) % musicas.length;
+  audio.src = musicas[musicaAtual];
+  audio.play();
+});
+</script>
+
+</body>
+</html>
